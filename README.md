@@ -2,35 +2,40 @@
 - Neural Machine Translation for low-resource language, Ateso
 
 ## Data
-- Paried sentences in English, Ateso, Acholi
+- Sentences in English, Ateso, Acholi
 - Train(23 947), Dev(496), Test (500)
 - Source: https://github.com/SunbirdAI/salt
-
 
 ## Tokenizer
 1. Fairseq (fairseq==0.10.0)
 - SentencePiece Tokenizer (https://github.com/google/sentencepiece)
 - Train SententcePiece Tokenizer with BPE (Byte Pair Encoding)
 - spm.model, spm.vocal used for tokenze the original input sentences.
-- tokenizer.py
 
 2. mBart-50
 - mBart-50 tokenizer
 
 ## Models
-1. Fairseq (fairseq==0.10.0), Baseline, epoch 5 and 10: fairseq_baseline.py
-2. mBart-50, Baseline, epoch 5: mbart50_baseline.py
-3. mBart-50, fine-tuned using Swahili language code, epoch 5: mbart50_baseline_sw.py
-4. mBart-50, fine-tuned using cross-lingual learning with Acholi, epoch 5 and 10: mbart50_finetune.py
-5. mBart-50, fine-tuned using Swahili language code and cross-lingual learning with Acholi, epoch 5: mbart50_finetune_sw.py
+1. Fairseq (fairseq==0.10.0), Baseline, epoch 5 and 10
+2. mBart-50, Baseline, epoch 5
+3. mBart-50, fine-tuned using Swahili language code, epoch 5
+4. mBart-50, fine-tuned using cross-lingual learning with Acholi, epoch 5 and 10
+5. mBart-50, fine-tuned using Swahili language code and cross-lingual learning with Acholi, epoch 5
 
+## Experimental process
+1. Fairseq
+1) Train SentencePiece Tokenizer on the train, dev and test datasets with BPE. -> sentencepiece_tokenizer.py
+2) Tokenize English, Ateso and Acholi sentences with the trained SentencePiece Tokenizer. ->  sentencepiece_tokenizer.py
+3) Train Fairseq model and generate translation for test the trained model. ->  fairseq_baseline.py
+4) Evaluate using Sacrebleu. -> fairseq_baseline_translate.sh
 
-## Translate
-1. Fairseq: fairseq_baseline_translate.sh
-2. mBart-50, baseline: mbart50_baseline_translate.py
-3. mBart-50, fine-tuned using cross lingual learning with acholi, epoch 5 and 10: mbart50_finetune_translate.py
-4. mBart-50, fine-tuned using Swahili language code and cross-lingual learning with Acholi, epoch 5: mbart50_finetune_sw_translate.py
-
-## Evaluation
-Screbleu
+2. mBart-50
+1) Train mBart-50 model. -> mbart50_baseline.py
+2) Generate translation for test the baseline model -> mbart50_baseline_translate.py
+3) Train mBart-50 model using Swahili language code. -> mbart50_baseline_sw.py
+4) Generate translation for test the baseline model using Swahili language code. -> mbart_finetune_sw_translate.py
+7) Fine-tune mBart-50 model using cross lingual learning with acholi -> mbart50_finetune_cross.py
+8) Generate translation for test the fine-tuned model using cross lingual learning. -> mbart_finetune_cross_translate.py
+9) Fine-tune mBart-50 model using Swahili language cod and cross lingual learning with acholi -> mbart50_finetune_cross_sw.py
+10) Generate translation for test the fine-tuned model using Swahili language code and cross lingual learning. -> mbart_finetune_sw_translate.py
 
