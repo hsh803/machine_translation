@@ -1,5 +1,6 @@
 # Machine translation
 - Neural Machine Translation for low-resource language, Ateso
+- NOTE: Training codes are slightly adjusted from the initial ones used for our expeirments to correct some incorrections and to clean unused snippets in practice. These adjustments could give improved performance compared to the results of the initial ones.
 
 ## Data
 - Sentences in English, Ateso, Acholi
@@ -17,7 +18,7 @@
 
 ## Models
 1. Fairseq (fairseq==0.10.0), Baseline, epoch 5 and 10
-2. mBart-50, Baseline, epoch 5
+2. mBart-50, Baseline, epoch 5: Trained on training dataset containing Ateso and English paried sentences
 3. mBart-50, fine-tuned using Swahili language code, epoch 5
 4. mBart-50, fine-tuned using cross-lingual learning with Acholi, epoch 5 and 10
 5. mBart-50, fine-tuned using Swahili language code and cross-lingual learning with Acholi, epoch 5
