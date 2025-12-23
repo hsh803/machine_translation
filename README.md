@@ -41,6 +41,16 @@
 - Generate translation for test the fine-tuned model using Swahili language code and cross lingual learning. -> mbart_sw_translate.py
 
 ## Results
-<img width="600" height="200" alt="image" src="https://github.com/user-attachments/assets/f1dc130a-0b2e-481f-a7b9-1f601f8a1236" />
+- SacreBLEU scores for the NMT model translations from Ateso to English
+<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/b0767c19-9bae-46d0-b980-c7e3bf4d27ae" />
+
+## Conclusionv (summarized)
+- The mBart models show much better performance than the fairseq model.
+- we obtained the best performance using cross-lingual training on Acholi for 5 epochs (21.38 SacreBLEU).
+- The case using Swahili language code for tokenization in training gave an interesting improvement of the model’s performance, which outperformed the baseline model. The influences of Swahili to Ateso in vocabulary might have contributed to improved translations.
+- Another point that was surprising, was the case using both Swahili language code and cross-lingual technique in training (16.14
+SacreBLEU). This case underperformed the cases using only Swahili language code (16.41 SacreBLEU) or only cross-lingual technique (21.38 SacreBLEU).
+- These results suggest that it can confuse the model to learn new language, Ateso in consistent and coherent contexts when combining Swahili language code for tokenization with cross-lingual transfer in training.
+- Based on those results, we demonstrate that using cross-lingual transfer in training, the model promises better performance than using Swahili language code for tokenization.
 
 
