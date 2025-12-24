@@ -42,7 +42,8 @@
 
 ## Results
 - SacreBLEU scores for the NMT model translations from Ateso to English
-<img width="400" height="250" alt="image" src="https://github.com/user-attachments/assets/b0767c19-9bae-46d0-b980-c7e3bf4d27ae" />
+<img width="350" height="200" alt="image" src="https://github.com/user-attachments/assets/30750cc8-5372-40f7-9ef8-f65125e40d9a" />
+
 
 ## Conclusionv (summarized)
 - The mBart models show much better performance than the fairseq model.
