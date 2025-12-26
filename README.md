@@ -8,10 +8,10 @@
 - Source: https://github.com/SunbirdAI/salt
 
 ## Tokenizer
-- Fairseq (fairseq==0.10.0)
-: SentencePiece Tokenizer (https://github.com/google/sentencepiece)
-: Train SententcePiece Tokenizer with BPE (Byte Pair Encoding)
-: spm.model, spm.vocal used for tokenize the original input sentences.
+- Fairseq (fairseq==0.10.0)  
+: SentencePiece Tokenizer (https://github.com/google/sentencepiece)  
+: Train SententcePiece Tokenizer with BPE (Byte Pair Encoding)  
+: spm.model, spm.vocal used for tokenize the original input sentences.  
 - mBart-50-large: mBart-50 SentencePiece Tokenizer
 
 ## Models
@@ -22,13 +22,13 @@
 - mBart-50, fine-tuned: Trained on English, Ateso, Acholi paried sentences using Swahili language code for Ateso and Acholi as well as cross-lingual learning in epoch 5
 
 ## Experiments
-- Fairseq
+- Fairseq  
 : Train SentencePiece Tokenizer on the train, dev and test datasets with BPE. -> sentencepiece_tokenizer.py  
 : Tokenize English, Ateso and Acholi sentences with the trained SentencePiece Tokenizer. ->  sentencepiece_tokenizer.py  
 : Train Fairseq model and generate translation for test the trained model. ->  fairseq_baseline.py  
 : Evaluate using Sacrebleu. -> fairseq_baseline_translate.sh  
 
-- mBart-50
+- mBart-50  
 : Train mBart-50 model. -> mbart50_baseline.py  
 : Generate translation for test the baseline model -> mbart50_baseline_translate.py  
 : Train mBart-50 model using Swahili language code. -> mbart50_baseline_sw.py  
