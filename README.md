@@ -23,20 +23,20 @@
 
 ## Experiments
 - Fairseq
-: Train SentencePiece Tokenizer on the train, dev and test datasets with BPE. -> sentencepiece_tokenizer.py
-: Tokenize English, Ateso and Acholi sentences with the trained SentencePiece Tokenizer. ->  sentencepiece_tokenizer.py
-: Train Fairseq model and generate translation for test the trained model. ->  fairseq_baseline.py
-: Evaluate using Sacrebleu. -> fairseq_baseline_translate.sh
+: Train SentencePiece Tokenizer on the train, dev and test datasets with BPE. -> sentencepiece_tokenizer.py  
+: Tokenize English, Ateso and Acholi sentences with the trained SentencePiece Tokenizer. ->  sentencepiece_tokenizer.py  
+: Train Fairseq model and generate translation for test the trained model. ->  fairseq_baseline.py  
+: Evaluate using Sacrebleu. -> fairseq_baseline_translate.sh  
 
 - mBart-50
-: Train mBart-50 model. -> mbart50_baseline.py
-: Generate translation for test the baseline model -> mbart50_baseline_translate.py
-: Train mBart-50 model using Swahili language code. -> mbart50_baseline_sw.py
-: Generate translation for test the baseline model using Swahili language code. -> mbart_sw_translate.py
-: Fine-tune mBart-50 model using cross lingual learning with acholi -> mbart50_finetune_cross.py
-: Generate translation for test the fine-tuned model using cross lingual learning. -> mbart_finetune_cross_translate.py
-: Fine-tune mBart-50 model using Swahili language cod and cross lingual learning with acholi -> mbart50_finetune_cross_sw.py
-: Generate translation for test the fine-tuned model using Swahili language code and cross lingual learning. -> mbart_sw_translate.py
+: Train mBart-50 model. -> mbart50_baseline.py  
+: Generate translation for test the baseline model -> mbart50_baseline_translate.py  
+: Train mBart-50 model using Swahili language code. -> mbart50_baseline_sw.py  
+: Generate translation for test the baseline model using Swahili language code. -> mbart_sw_translate.py  
+: Fine-tune mBart-50 model using cross lingual learning with acholi -> mbart50_finetune_cross.py  
+: Generate translation for test the fine-tuned model using cross lingual learning. -> mbart_finetune_cross_translate.py  
+: Fine-tune mBart-50 model using Swahili language cod and cross lingual learning with acholi -> mbart50_finetune_cross_sw.py  
+: Generate translation for test the fine-tuned model using Swahili language code and cross lingual learning. -> mbart_sw_translate.py  
 
 ## Results
 - SacreBLEU scores for the NMT model translations from Ateso to English
