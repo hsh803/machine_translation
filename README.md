@@ -15,11 +15,11 @@
 - mBart-50-large: mBart-50 SentencePiece Tokenizer
 
 ## Models
-1. Fairseq, Baseline: Trained on English, Ateso paried sentences in epoch 5 and 10 respectively
-2. mBart-50, Baseline: Trained on English, Ateso paried sentences in epoch 5 and 10 respectively
-3. mBart-50, fine-tuned: Trained on English, Ateso paried sentences using Swahili language code for Ateso in epoch 5
-4. mBart-50, fine-tuned: Trained on English, Ateso, Acholi paried sentences using cross-lingual learning in epoch 5 and 10 respectively
-5. mBart-50, fine-tuned: Trained on English, Ateso, Acholi paried sentences using Swahili language code for Ateso and Acholi as well as cross-lingual learning in epoch 5
+- Fairseq, Baseline: Trained on English, Ateso paried sentences in epoch 5 and 10 respectively
+- mBart-50, Baseline: Trained on English, Ateso paried sentences in epoch 5 and 10 respectively
+- mBart-50, fine-tuned: Trained on English, Ateso paried sentences using Swahili language code for Ateso in epoch 5
+- mBart-50, fine-tuned: Trained on English, Ateso, Acholi paried sentences using cross-lingual learning in epoch 5 and 10 respectively
+- mBart-50, fine-tuned: Trained on English, Ateso, Acholi paried sentences using Swahili language code for Ateso and Acholi as well as cross-lingual learning in epoch 5
 
 ## Experiments
 - Fairseq
